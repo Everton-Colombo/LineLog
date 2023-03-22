@@ -1,0 +1,24 @@
+====================++ Database Alteration Article ++===================#
+																		|
+Date of registration: 29/04/2019										|
+																		|
+Summary:																|
+	In order to be able to get time sensitive statistics				|
+	from tables in the main database, we announce the alteration 		|
+	of the costumers and products tables.								|
+																		|
+Concept:																|
+	To those tables will be added one extra column called				|
+	creationDate, witch will contain the dumps of a datetime.date		|
+	object containing the date of insertion of the particular row.		|
+	The idea is to have the statistics page create datetime.timedelta	|
+	objects in order to determine each entry's period of creation.		|
+																		|
+Execution Plan:															|
+	In order to fully implement the alterations, changes in the 		|
+	new_product() and new_costumer() functions will have to be made.	|
+																		|
+	There might be some lines of code in the Sell, Costumers or Products|
+	page. If so, there will be the need to change that as well.			|
+																		|
+========================================================================#
